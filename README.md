@@ -3,11 +3,13 @@
 
 The files in this repository were used to configure the network depicted below.
 
-(Images/diagram-topology.png)
+![diagram-topology](https://user-images.githubusercontent.com/83547498/116915999-faf55f80-ac09-11eb-9f25-fd5148d396d4.png)
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
-(Images/install-elk.png)
+![install-elk](https://user-images.githubusercontent.com/83547498/116916048-0b0d3f00-ac0a-11eb-811d-b204e1b18ad2.png)
+
 
 This document contains the following details:
 - Description of the Topologu
@@ -77,7 +79,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-(Images/docker-ps.png)
+![docker-ps](https://user-images.githubusercontent.com/83547498/116916071-13657a00-ac0a-11eb-9de0-79ab2dc3ae66.png)
+
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -110,4 +113,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 - The Host file must be updated with the new Web VMs IP addresses as well as the Elk-Servers IP address.
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - http://20.65.45.129:5601/app/kibana
-- (ajmartinezjr19/AJ-Martinez-Project1/Images/kibana.png)
+- (![kibana](https://user-images.githubusercontent.com/83547498/116915836-caadc100-ac09-11eb-81f1-4d79c8ef61d0.png)
