@@ -110,4 +110,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 - The Host file must be updated with the new Web VMs IP addresses as well as the Elk-Servers IP address.
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - http://20.65.45.129:5601/app/kibana
-- Images/kibana.png
+- (ajmartinezjr19/AJ-Martinez-Project1/Images/kibana.png)
