@@ -66,11 +66,14 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - _TODO: What is the main advantage of automating configuration with Ansible?_
+- Automating configuration with Ansible helps eliminate time consuing tasks and allows it to be set up in miniutes across multiple servers.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Installs Docker to use for creating containers
+- Installs python3-pip thats used for managing software packages
+- Downloads the Elk Container
+- Lists ports that Elk will run on
+- Increases available memory
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -79,24 +82,31 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_
+- Web 1 10.0.0.7
+- Web 2 10.0.0.6
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat checks on the files or locations the user specifies and monitors changes to the log files.
+- Metricbeat records metrics and statistics from the servers and operating system which can be used to analyze how much RAm was being used during a specified time.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-config.yml file to /etc/ansible/roles/files.
+- Update the filebeat-config.yml file to include the private IP address of the Elk VM - 10.1.0.4.
+- Run the playbook, and navigate to http://20.65.45.129:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
+- filebeat-playbook.yml is the playbook and it is copied to the filebeat directory to run.
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- The Host file must be updated with the new Web VMs IP addresses as well as the Elk-Servers IP address.
 - _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- http://20.65.45.129:5601/app/kibana
