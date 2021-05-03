@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  (Images/install-elk.png)
+(Images/install-elk.png)
 
 This document contains the following details:
 - Description of the Topologu
@@ -110,4 +110,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 - The Host file must be updated with the new Web VMs IP addresses as well as the Elk-Servers IP address.
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - http://20.65.45.129:5601/app/kibana
-Images/kibana.png
+- Images/kibana.png
